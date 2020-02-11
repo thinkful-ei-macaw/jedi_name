@@ -70,3 +70,43 @@ throw ('enter a month and remember to capitolize')
 }
 
 console.log(daysInAMonth('January', false))
+
+let choices = ['rock', 'paper', 'scissors']; //sets the possible choices for the computer to choose from
+let round = 0;
+function computerPlay() {
+  return choices[Math.floor(Math.random() * choices.length)];
+} //randomizes the computers choice
+function playRound(player) {
+  const computer = computerPlay();
+  if (player == 'rock') {
+    if (computer == 'rock') {
+      return 'Tie';
+    } else if (computer == 'scissors') {
+      return 'You Win!';
+    } else if (computer == 'paper') {
+      return 'You Lose!';
+    } else {
+      return 'error';
+    }
+  } else if (player == 'scissors') {
+    if (computer == 'rock') {
+      return 'You Lose!';
+    } else if (computer == 'scissors') {
+      return 'Tie';
+    } else if (computer == 'paper') {
+      return 'You Win!';
+    } else {
+      return 'error';
+    }
+  } else if (player == 'paper') {
+    if (computer == 'rock') {
+      return 'You Win!';
+    } else if (computer == 'scissors') {
+      return 'You Lose!';
+    } else if (computer == 'paper') {
+      return 'Tie';
+    }
+  } else {
+    return 'error';
+  }
+}
