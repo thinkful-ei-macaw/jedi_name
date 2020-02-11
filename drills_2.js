@@ -38,4 +38,35 @@ function getLetter(word) {
   }
   console.log(decode('craft block argon meter bells brown croon droop'));
 
+  'use strict';
+function daysInAMonth(month, leapYear) {
+  if (month === 'February'&& leapYear) {
+    return 28;
+  } if (month === 'February' && !leapYear) {
+    return 29;
+  } 
   
+  switch(month) {
+  case 'January':
+  case 'March':
+  case 'May':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    return 31;
+    break;
+  } 
+  
+  switch(month) {
+  case 'April':
+  case 'June':
+  case 'September':
+  case 'November':
+    return 30;
+    break;
+  }
+throw ('enter a month and remember to capitolize')
+}
+
+console.log(daysInAMonth('January', false))
